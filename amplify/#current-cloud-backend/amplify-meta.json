@@ -1,15 +1,39 @@
 {
-    "providers": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-amplifyauthex-local-162608-authRole",
-            "UnauthRoleArn": "arn:aws:iam::571374406085:role/amplify-amplifyauthex-local-162608-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::571374406085:role/amplify-amplifyauthex-local-162608-authRole",
-            "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-amplifyauthex-local-162608-deployment",
-            "UnauthRoleName": "amplify-amplifyauthex-local-162608-unauthRole",
-            "StackName": "amplify-amplifyauthex-local-162608",
-            "StackId": "arn:aws:cloudformation:us-west-2:571374406085:stack/amplify-amplifyauthex-local-162608/344f5040-7927-11ea-80c6-0a8077ae26ee",
-            "AmplifyAppId": "d3fjd5wocf9tjl"
-        }
-    }
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-amplifyauthex-local-162608-authRole",
+			"UnauthRoleArn": "arn:aws:iam::571374406085:role/amplify-amplifyauthex-local-162608-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::571374406085:role/amplify-amplifyauthex-local-162608-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "amplify-amplifyauthex-local-162608-deployment",
+			"UnauthRoleName": "amplify-amplifyauthex-local-162608-unauthRole",
+			"StackName": "amplify-amplifyauthex-local-162608",
+			"StackId": "arn:aws:cloudformation:us-west-2:571374406085:stack/amplify-amplifyauthex-local-162608/344f5040-7927-11ea-80c6-0a8077ae26ee",
+			"AmplifyAppId": "d3fjd5wocf9tjl"
+		}
+	},
+	"auth": {
+		"amplifyauthex44d2db81": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyauthex-local-162608-deployment/amplify-cfn-templates/auth/amplifyauthex44d2db81-cloudformation-template.yml",
+				"logicalId": "authamplifyauthex44d2db81"
+			},
+			"lastPushTimeStamp": "2020-04-07T23:40:00.504Z",
+			"output": {
+				"AppClientSecret": "hstog7r4goerhgesbt21e8v70jvn57d1evgp1lk8kds4f98i25j",
+				"UserPoolId": "us-west-2_kt1XAlRgQ",
+				"AppClientIDWeb": "6vas4aiukt5t2p9vah46pcmpc9",
+				"AppClientID": "75723ev1i2ur9flv76ouofjjrj",
+				"HostedUIDomain": "amplifyauthex-local",
+				"IdentityPoolId": "us-west-2:140c5ebb-a38d-406d-bc76-66f9f97a41a2",
+				"IdentityPoolName": "amplifyauthex44d2db81_identitypool_44d2db81__local",
+				"OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"ReactNativeAmplifyAuthExample://\"],\"LogoutURLs\":[\"ReactNativeAmplifyAuthExample://\"]}",
+				"UserPoolName": "amplifyauthex44d2db81_userpool_44d2db81"
+			},
+			"lastPushDirHash": "M4YFbcvrWp5X0K3acEMb+qamLYQ="
+		}
+	}
 }

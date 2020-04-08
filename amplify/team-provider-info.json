@@ -10,6 +10,13 @@
             "StackName": "amplify-amplifyauthex-local-162608",
             "StackId": "arn:aws:cloudformation:us-west-2:571374406085:stack/amplify-amplifyauthex-local-162608/344f5040-7927-11ea-80c6-0a8077ae26ee",
             "AmplifyAppId": "d3fjd5wocf9tjl"
+        },
+        "categories": {
+            "auth": {
+                "amplifyauthex44d2db81": {
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Google\",\"client_id\":\"591860797179-4utkrprbfh09qjg1vmf5m5t3h37j81af.apps.googleusercontent.com\",\"client_secret\":\"b8VNNeBdnIuQF9b4P67_8k0h\"}]"
+                }
+            }
         }
     }
 }
