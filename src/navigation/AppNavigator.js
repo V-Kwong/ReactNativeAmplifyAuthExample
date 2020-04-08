@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Auth, Hub } from 'aws-amplify';
 
 import SplashScreen from '../screens/SplashScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -12,35 +13,49 @@ const ParentStack = createStackNavigator();
 export default class AppNavigator extends Component {
 
   state = {
+    user: null,
     isLoading: true,
     isLoggedIn: false,
   }
 
   componentDidMount() {
-    this.checkAuth()
+    Hub.listen("auth", ({ payload: { event, data } }) => {
+      console.log(event)
+      console.log(data)
+      switch (event) {
+        case "signIn":
+          this.signedIn(data)
+          break;
+        case "signOut":
+          this.signedOut()
+          break;
+        case "customOAuthState":
+          console.log("customOAuthState???")
+      }
+    });
+
+    Auth.currentAuthenticatedUser()
+      .then(user => this.signedIn(user))
+      .catch(() => this.signedOut());
   }
 
-  updateAuth = (isLoggedIn) => {
-    this.setState({
-      isLoggedIn: isLoggedIn
+  signedIn(user) {
+    this.setState({ 
+      user: user,
+      isLoading: false,
+      isLoggedIn: true,
     })
+    console.log("signed in baby")
+    console.log(user)
   }
 
-  checkAuth = async () => {
-    setTimeout(() => {  
-      this.setState({ 
-        isLoading: false,
-        isLoggedIn: false 
-      })
-    }, 2500);
-    // try {
-    //   await AmplifyAuth.currentAuthenticatedUser()
-    //   console.log('user is signed in')
-    //   this.setState({ currentView: 'mainNav' })
-    // } catch (err) {
-    //   console.log('user is not signed in')
-    //   this.setState({ currentView: 'auth' })
-    // }
+  signedOut() {
+    this.setState({ 
+      user: null,
+      isLoading: false,
+      isLoggedIn: false,
+    })
+    console.log("signed out bro")
   }
 
   render() {
