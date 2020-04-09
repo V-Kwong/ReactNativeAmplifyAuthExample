@@ -8,10 +8,6 @@ export default class LoginScreen extends Component {
     return (
         <View style={styles.container} >
           <Button
-            // onPress={() => {
-            //   console.log("henlo")
-            //   this.props.navigation.navigate('Main')
-            // }}
             onPress={() => Auth.federatedSignIn({ provider: "Google" })}
             title="Authenticate with Google"
           />
