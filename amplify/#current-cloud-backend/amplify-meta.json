@@ -21,7 +21,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyauthex-local-162608-deployment/amplify-cfn-templates/auth/amplifyauthex44d2db81-cloudformation-template.yml",
 				"logicalId": "authamplifyauthex44d2db81"
 			},
-			"lastPushTimeStamp": "2020-04-07T23:40:00.504Z",
+			"lastPushTimeStamp": "2020-04-09T03:08:24.178Z",
 			"output": {
 				"AppClientSecret": "hstog7r4goerhgesbt21e8v70jvn57d1evgp1lk8kds4f98i25j",
 				"UserPoolId": "us-west-2_kt1XAlRgQ",
@@ -30,10 +30,10 @@
 				"HostedUIDomain": "amplifyauthex-local",
 				"IdentityPoolId": "us-west-2:140c5ebb-a38d-406d-bc76-66f9f97a41a2",
 				"IdentityPoolName": "amplifyauthex44d2db81_identitypool_44d2db81__local",
-				"OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"ReactNativeAmplifyAuthExample://\"],\"LogoutURLs\":[\"ReactNativeAmplifyAuthExample://\"]}",
+				"OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"authex://\"],\"LogoutURLs\":[\"authex://\"]}",
 				"UserPoolName": "amplifyauthex44d2db81_userpool_44d2db81"
 			},
-			"lastPushDirHash": "M4YFbcvrWp5X0K3acEMb+qamLYQ="
+			"lastPushDirHash": "iPG3LTcC5zYBle6/myjwXU+Idxk="
 		}
 	}
 }

@@ -1,9 +1,9 @@
 {
-	"auth": {
-		"amplifyauthex44d2db81": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": []
-		}
-	}
+    "auth": {
+        "amplifyauthex44d2db81": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": []
+        }
+    }
 }
